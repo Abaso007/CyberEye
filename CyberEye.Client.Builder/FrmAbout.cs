@@ -15,7 +15,7 @@ namespace CyberEye.Client.Builder
         private int i = 0;
         private string aboutText =
             "Project: CyberEye Telegram RAT" + Environment.NewLine +
-            "Version: 1.0.2" + Environment.NewLine +
+            "Version: 1.0.3" + Environment.NewLine +
             "Coded & Modded by: Cisamu AKA cisamu123" + Environment.NewLine +
             "Telegram API: HTTP Requests" + Environment.NewLine +
             "Keylogger: Custom implementation based on .NET low-level hooks" + Environment.NewLine +
@@ -25,7 +25,7 @@ namespace CyberEye.Client.Builder
             "Special Thanks to: LimerBoy, njq8 ,open-source community and the creator of NJRat 0.7D Horror Edition 2022 for providing the open-source code that helped in the development of CyberEye." + Environment.NewLine +
             "GitHub: https://github.com/cisamu123/CyberEye" + Environment.NewLine +
             "Telegram Channel: https://t.me/Cisamu" + Environment.NewLine +
-            "Telegram Contact: https://t.me/CodQu" + Environment.NewLine +
+            "Telegram Contact: https://t.me/cisamu123" + Environment.NewLine +
             "----------------------------------------------------------";
         public FrmAbout()
         {

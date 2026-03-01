@@ -297,8 +297,11 @@ namespace CyberEye.Client.Builder
                 ilCode = ilCode.Replace("[AssemblyCopyrightBuild]", AssemblyCopyright);
                 ilCode = ilCode.Replace("[AssemblyTrademarkBuild]", AssemblyTrademark);
                 ilCode = ilCode.Replace("[AssemblyCultureBuild]", AssemblyCulture);
-                ilCode = ilCode.Replace("1.0.2", AssemblyVersion);
+                ilCode = ilCode.Replace("1.0.3", AssemblyVersion);
                 ilCode = ilCode.Replace("[AssemblyFileVersionBuild]", AssemblyFileVersion);
+
+                ilCode = ilCode.Replace("[heartbeatIntervalBuild]", numericUpDown4.Value.ToString());
+                ilCode = ilCode.Replace("[offlineThresholdBuild]", numericUpDown5.Value.ToString());
                 // Save modified IL
                 string tempIl = Path.GetTempFileName();
                 File.WriteAllText(tempIl, ilCode);

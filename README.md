@@ -4,7 +4,7 @@ Modded Program for remote control of windows computers via telegram bot. Written
   <img src="images/logo.jpg">
 </p>
 <div id="badges" align="center">
-  <a href="https://t.me/CodQu">
+  <a href="https://t.me/cisamu123">
     <img src="https://img.shields.io/badge/Telegram-blue?style=for-the-badge&logo=telegram&logoColor=white" alt="LinkedIn Badge"/>
   </a>
     <a href="https://t.me/Cisamu">
